@@ -10,7 +10,7 @@ root.render(
     <Global
       styles={css`
         body {
-          margin: 0;
+          margin: 5px;
           font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial,
             sans-serif;
           -webkit-font-smoothing: antialiased;
@@ -20,6 +20,8 @@ root.render(
         ::after,
         ::before {
           box-sizing: border-box;
+          font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial,
+            sans-serif;
         }
       `}
     />
