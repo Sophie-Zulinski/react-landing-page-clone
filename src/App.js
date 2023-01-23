@@ -16,7 +16,7 @@ const bannerSectionStyles = css`
   }
 `;
 
-const topBottonStyles = css`
+const BottonStyles = css`
   align-items: center;
   background: rgb(74, 144, 226);
   border-radius: 100px;
@@ -41,7 +41,7 @@ const heroimageStyles = css`
   width: 100vw;
 `;
 
-const sectionOneTopStyles = css`
+const sectionTopStyles = css`
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
@@ -60,12 +60,22 @@ const sectionOneBottomStyles = css`
   font-size: 1rem;
   font-weight: 300;
   color: #333333;
+  text-align: center;
 `;
 
-const textStyles = css`
-  background-image: linear-gradient(50deg, blue, darkblue);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+const testimonialStyles = css`
+  justify-content: center;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #333333;
+  text-align: center;
+`;
+
+const authorStyles = css`
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
 `;
 
 function App() {
@@ -81,7 +91,7 @@ function App() {
               />
             </a>
           </div>
-          <div css={topBottonStyles}>Purchase</div>
+          <div css={BottonStyles}>Purchase</div>
         </section>
       </header>
 
@@ -93,10 +103,9 @@ function App() {
             alt="Calm book logo"
           />
         </section>
-        <section css={sectionOneTopStyles}>
+        <section css={sectionTopStyles}>
           Calm the mind. Change the world
         </section>
-        <text css={textStyles}>hello</text>
         <section css={sectionOneBottomStyles}>
           Modern life is hectic and relentless: trains delayed, endless emails
           filling the inbox, kids squabbling before bedtime… There has never
@@ -106,7 +115,48 @@ function App() {
           tricks and habits that will change the rest of your life. It is a
           practical and pleasurable guide to twenty-first century mindfulness.
         </section>
-        body
+        <section>
+          <img
+            css={heroimageStyles}
+            src="https://res.cloudinary.com/calm-com/image/upload/v1656359615/www-next/book/benefits-splash-desktop.png"
+            alt="Calm book logo"
+          />
+        </section>
+        <section>
+          <p css={testimonialStyles}>
+            “Great collage of ideas and practical advice of how to reduce stress
+            in this fast paced world. A beautifully presented book which even
+            calms you down when you pick it up. I would recommend it to
+            everyone.”
+          </p>
+          <p css={testimonialStyles}>
+            “A beautifully presented book that is as lovely to look at as it is
+            to read. Simple tips and inspiration on how to bring calm into your
+            life. Highly recommend.”
+          </p>
+        </section>
+        <section css={sectionTopStyles}>Now available on Amazon</section>
+
+        <section css={sectionTopStyles}>
+          <div css={BottonStyles}>Purchase</div>
+        </section>
+        <section css={sectionTopStyles}>Meet the Authors</section>
+        <section>
+          <img
+            css={authorStyles}
+            src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359614%2Fwww-next%2Fbook%2Fwatercolor-acton.png&w=640&q=75"
+            alt="Calm book logo"
+          />
+          <div css={sectionOneBottomStyles}>Michael Acton Smith @acton</div>
+        </section>
+        <section>
+          <img
+            css={authorStyles}
+            src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359615%2Fwww-next%2Fbook%2Fwatercolor-tewy.png&w=640&q=75"
+            alt="Calm book logo"
+          />
+          <div css={sectionOneBottomStyles}>Alex Tew @tewy</div>
+        </section>
       </body>
       <footer>footer</footer>
     </>
