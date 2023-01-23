@@ -46,6 +46,7 @@ const sectionTopStyles = css`
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 300;
+  font-family:
   padding: 1rem;
   font-style: normal;
   text-anchor: middle;
@@ -158,7 +159,8 @@ function App() {
           <div css={sectionOneBottomStyles}>Alex Tew @tewy</div>
         </section>
       </body>
-      <footer>footer</footer>
+
+      <footer></footer>
     </>
   );
 }

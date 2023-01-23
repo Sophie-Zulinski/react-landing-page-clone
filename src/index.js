@@ -18,8 +18,7 @@ root.render(
         ::after,
         ::before {
           box-sizing: border-box;
-          font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial,
-            sans-serif;
+          font-family: 'Mulish', sans-serif;
         }
       `}
     />
