@@ -8,11 +8,8 @@ const bannerSectionStyles = css`
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-left: 176px;
-  margin-right: 176px;
-  > a:hover {
-    background-color: #4c51bf;
-  }
+  padding-left: 100px;
+  padding-right: 100px;
 `;
 
 const BottonStyles = css`
@@ -24,27 +21,28 @@ const BottonStyles = css`
   padding: 20px 40px;
   font-weight: 800;
   :hover {
-    background-color: red;
+    background-color: darkblue;
   }
 `;
 
 const heroimageStyles = css`
   display: flex;
-  justify-content: space-between;
-  width: 100vw;
+  margin: auto;
+  height: 750px;
 `;
 
 const headlineStyles = css`
   display: flex;
   justify-content: center;
-  font-size: 2.25rem;
+  font-size: 2.2rem;
   font-weight: 300;
   padding: 1rem;
-  text-anchor: middle;
+  text-anchor: middle  x: 50% y: 50%;;
   margin: 20px;
   background-image: url('https://www.calm.com/_next/static/media/calm-text-gradient.6c145128.png');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+
 `;
 
 const sectionOneBottomStyles = css`
@@ -52,7 +50,7 @@ const sectionOneBottomStyles = css`
   justify-content: center;
   text-align: center;
   margin: auto;
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #333333;
 
@@ -60,24 +58,26 @@ const sectionOneBottomStyles = css`
 `;
 
 const authorWarpper = css`
-  background-color: transparent;
   display: flex;
-  justify-content: space-between;
-  padding: 20px;
+  justify-content: center;
+  width: 500px;
+  padding: 32px;
+  gap: 50px;
+  margin: 0px auto;
 `;
 
 const sectionAuthorStyles = css`
   display: flex;
-  font-size: 1.25rem;
-  font-weight: 300;
-  font-family:
-  padding: 1rem;
-  font-style: normal;
-  text-anchor: middle;
-  background-image: linear-gradient(blue, red);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  justify-content: space-between;
+  flex-direction: column;
+  margin: auto;
+  text-align: center;
+  img {
+    width: 310px;
+  }
+  div {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
 `;
 
 const reviewCardContainerStyles = css`
@@ -95,7 +95,8 @@ const reviewCardContainerStyles = css`
 const cardStyles = css`
   background-color: white;
   padding: 42px 36px 28px;
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 1.3rem;
 `;
 
 const centerpositionStyles = css`
@@ -103,6 +104,37 @@ const centerpositionStyles = css`
   justify-content: center;
   text-align: center;
   margin: auto;
+`;
+
+const span = css`
+  margin-left: 10px;
+`;
+
+const spanStars = css`
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+`;
+
+const highlighttext = css`
+  color: #009af9;
+`;
+
+const footerStyles = css`
+  text-decoration: none;
+  display: flex;
+  font-size: 30px;
+  list-style: none;
+  justify-content: space-around;
+  gap: 40px;
+  ul {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  li {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
 `;
 
 function App() {
@@ -115,13 +147,14 @@ function App() {
               <img
                 src="https://www.calm.com/_n/images/calm-logo-gradient.svg"
                 alt="calm logo"
+                width="150px"
               />
             </a>
           </div>
 
           <div css={BottonStyles}>
             <Amazonlogo />
-            Purchase
+            <span css={span}> Purchase</span>
           </div>
         </section>
       </header>
@@ -136,15 +169,13 @@ function App() {
         </section>
         <section css={headlineStyles}>Calm the mind. Change the world</section>
         <section css={sectionOneBottomStyles}>
-          <div>
-            Modern life is hectic and relentless: trains delayed, endless emails
-            filling the inbox, kids squabbling before bedtime… There has never
-            been a more important time to rediscover your pause button. Calm is
-            the book that will show you how to take back a little bit of peace,
-            space and all-important calm. This book contains the simple tools,
-            tricks and habits that will change the rest of your life. It is a
-            practical and pleasurable guide to twenty-first century mindfulness.
-          </div>
+          Modern life is hectic and relentless: trains delayed, endless emails
+          filling the inbox, kids squabbling before bedtime… There has never
+          been a more important time to rediscover your pause button. Calm is
+          the book that will show you how to take back a little bit of peace,
+          space and all-important calm. This book contains the simple tools,
+          tricks and habits that will change the rest of your life. It is a
+          practical and pleasurable guide to twenty-first century mindfulness.
         </section>
         <section>
           <img
@@ -159,7 +190,7 @@ function App() {
             in this fast paced world. A beautifully presented book which even
             calms you down when you pick it up. I would recommend it to
             everyone.”
-            <span>
+            <span css={spanStars}>
               <Star />
             </span>
           </div>
@@ -168,7 +199,7 @@ function App() {
             “A beautifully presented book that is as lovely to look at as it is
             to read. Simple tips and inspiration on how to bring calm into your
             life. Highly recommend.”
-            <span>
+            <span css={spanStars}>
               <Star />
             </span>
           </div>
@@ -183,24 +214,53 @@ function App() {
           <div css={sectionAuthorStyles}>
             <img
               src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359614%2Fwww-next%2Fbook%2Fwatercolor-acton.png&w=640&q=75"
-              alt="Calm book logo"
+              alt="author acton"
             />
+            <div>
+              Michael Acton Smith <br />
+              <span css={highlighttext}>@acton</span>
+            </div>
           </div>
-          <div css={sectionAuthorStyles}>Michael Acton Smith @acton</div>
 
           <div css={sectionAuthorStyles}>
             <img
               src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359615%2Fwww-next%2Fbook%2Fwatercolor-tewy.png&w=640&q=75"
-              alt="Calm book logo"
+              alt="author tewy"
             />
+            <div>
+              Alex Tew <br />
+              <span css={highlighttext}>@tewy</span>
+            </div>
           </div>
-          <div css={sectionAuthorStyles}>Alex Tew @tewy</div>
         </section>
 
         <br></br>
       </body>
 
-      <footer></footer>
+      <footer css={footerStyles}>
+        <section>
+          <ul>Company</ul>
+          <li>About</li>
+          <li>Careers</li>
+          <li>Press</li>
+          <li>Blog</li>
+          <li>Meet our Instructor</li>
+        </section>
+        <section>
+          <ul>Offers</ul>
+          <li>Buy a Gift</li>
+          <li>Redeem a Gift</li>
+          <li>Family Plan</li> <li>Calm Health</li> <li>Calm for Business</li>
+        </section>
+        <section>
+          <ul>Help</ul>
+          <li>FAQ </li>
+          <li>Contact Us</li> <li>Terms</li> <li>Privacy</li>{' '}
+          <li>CCPA Notice</li>
+          <li>Accessibility Statement</li>
+          <li>Opt Out of Targeted Ads Cookies</li>
+        </section>
+      </footer>
     </>
   );
 }
