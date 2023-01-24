@@ -28,9 +28,14 @@ const bottonStyles = css`
 const heroimageStyles = css`
   display: flex;
   margin: auto;
-  width: 80vw;
+  width: 60vw;
 `;
 
+const heroimageStyles02 = css`
+  display: flex;
+  margin: auto;
+  width: 90vw;
+`;
 const headlineStyles = css`
   display: flex;
   justify-content: center;
@@ -209,7 +214,7 @@ function App() {
         </section>
         <section>
           <img
-            css={heroimageStyles}
+            css={heroimageStyles02}
             src="https://res.cloudinary.com/calm-com/image/upload/v1656359615/www-next/book/benefits-splash-desktop.png"
             alt="desktop"
           />
