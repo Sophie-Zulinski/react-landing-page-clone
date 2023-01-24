@@ -128,10 +128,12 @@ const footerStyles01 = css`
   gap: 40px;
   background-color: white;
   ul {
-    font-size: 1.2rem;
+    margin-top: 40px;
     font-weight: 200;
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(85, 85, 85);
+    margin-left: -40px;
+    font-size: 0.8rem;
   }
   li {
     font-size: 0.7rem;
