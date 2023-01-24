@@ -10,16 +10,15 @@ root.render(
     <Global
       styles={css`
         body {
-          margin: 5px;
-          font-family: 'Avenir Next', 'Helvetica Neue', Helvetica, Arial,
-            sans-serif;
         }
         *,
         ::after,
         ::before {
           box-sizing: border-box;
           font-family: 'Mulish', sans-serif;
-        }
+          font-size: 20px;
+          background-color: rgb(244, 246, 248);
+          font-weight: 400;
       `}
     />
     <App />

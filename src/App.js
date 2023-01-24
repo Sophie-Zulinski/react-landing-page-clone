@@ -3,36 +3,27 @@ import { css } from '@emotion/react';
 import logo from './logo.svg';
 
 const bannerSectionStyles = css`
-  background-color: transparent;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-
-  padding: 16px;
-  a {
-    color: #e2e8f0;
-    text-decoration: none;
-    font-size: 1.125rem;
+  margin-top: 20px;
+  margin-left: 176px;
+  margin-right: 176px;
+  > a:hover {
+    background-color: #4c51bf;
   }
 `;
 
 const BottonStyles = css`
-  align-items: center;
   background: rgb(74, 144, 226);
   border-radius: 100px;
-  border: none;
-  box-shadow: none;
   color: rgb(255, 255, 255);
   display: inline-flex;
-  font-size: 1rem;
-  font-weight: 500;
-  line-height: 28px;
-  justify-content: center;
   cursor: pointer;
-  outline: none;
-  min-height: 48px;
-  min-width: 48px;
-  padding: 0.75rem 1.11111rem 0.75rem 1.24074rem;
+  padding: 20px 40px;
+  font-weight: 800;
+  :hover {
+    background-color: red;
+  }
 `;
 
 const heroimageStyles = css`
@@ -41,9 +32,40 @@ const heroimageStyles = css`
   width: 100vw;
 `;
 
-const sectionTopStyles = css`
+const headlineStyles = css`
   display: flex;
   justify-content: center;
+  font-size: 2.25rem;
+  font-weight: 300;
+  padding: 1rem;
+  text-anchor: middle;
+  margin: 20px;
+  background-image: linear-gradient(blue, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+`;
+
+const sectionOneBottomStyles = css`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #333333;
+
+  max-width: 750px;
+`;
+
+const authorWarpper = css`
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+`;
+
+const sectionAuthorStyles = css`
+  display: flex;
   font-size: 1.25rem;
   font-weight: 300;
   font-family:
@@ -53,30 +75,30 @@ const sectionTopStyles = css`
   background-image: linear-gradient(blue, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-`;
-
-const sectionOneBottomStyles = css`
-  justify-content: center;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #333333;
-  text-align: center;
-`;
-
-const testimonialStyles = css`
-  justify-content: center;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 300;
-  color: #333333;
-  text-align: center;
-`;
-
-const authorStyles = css`
-  display: flex;
   justify-content: space-between;
-  width: 310px;
+`;
+
+const reviewCardContainerStyles = css`
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  padding: 32px;
+  gap: 50px;
+  width: 890px;
+  height: 440px;
+  margin: 0px auto;
+  font-weight: 400;
+`;
+
+const cardStyles = css`
+  background-color: white;
+`;
+
+const centerpositionStyles = css`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
 `;
 
 function App() {
@@ -92,7 +114,11 @@ function App() {
               />
             </a>
           </div>
-          <div css={BottonStyles}>Purchase</div>
+
+          <div css={BottonStyles}>
+            <img src="" alt="amazon logo" />
+            Purchase
+          </div>
         </section>
       </header>
 
@@ -104,60 +130,72 @@ function App() {
             alt="Calm book logo"
           />
         </section>
-        <section css={sectionTopStyles}>
-          Calm the mind. Change the world
-        </section>
+        <section css={headlineStyles}>Calm the mind. Change the world</section>
         <section css={sectionOneBottomStyles}>
-          Modern life is hectic and relentless: trains delayed, endless emails
-          filling the inbox, kids squabbling before bedtime… There has never
-          been a more important time to rediscover your pause button. Calm is
-          the book that will show you how to take back a little bit of peace,
-          space and all-important calm. This book contains the simple tools,
-          tricks and habits that will change the rest of your life. It is a
-          practical and pleasurable guide to twenty-first century mindfulness.
+          <div>
+            Modern life is hectic and relentless: trains delayed, endless emails
+            filling the inbox, kids squabbling before bedtime… There has never
+            been a more important time to rediscover your pause button. Calm is
+            the book that will show you how to take back a little bit of peace,
+            space and all-important calm. This book contains the simple tools,
+            tricks and habits that will change the rest of your life. It is a
+            practical and pleasurable guide to twenty-first century mindfulness.
+          </div>
         </section>
         <section>
           <img
             css={heroimageStyles}
             src="https://res.cloudinary.com/calm-com/image/upload/v1656359615/www-next/book/benefits-splash-desktop.png"
-            alt="Calm book logo"
+            alt="desktop"
           />
         </section>
-        <section>
-          <p css={testimonialStyles}>
-            “Great collage of ideas and practical advice of how to reduce stress
-            in this fast paced world. A beautifully presented book which even
-            calms you down when you pick it up. I would recommend it to
-            everyone.”
-          </p>
-          <p css={testimonialStyles}>
-            “A beautifully presented book that is as lovely to look at as it is
-            to read. Simple tips and inspiration on how to bring calm into your
-            life. Highly recommend.”
-          </p>
-        </section>
-        <section css={sectionTopStyles}>Now available on Amazon</section>
+        <div css={reviewCardContainerStyles}>
+          <div css={cardStyles}>
+            <p>
+              “Great collage of ideas and practical advice of how to reduce
+              stress in this fast paced world. A beautifully presented book
+              which even calms you down when you pick it up. I would recommend
+              it to everyone.”
+            </p>
 
-        <section css={sectionTopStyles}>
+            <span>stars</span>
+          </div>
+
+          <div css={cardStyles}>
+            <p>
+              “A beautifully presented book that is as lovely to look at as it
+              is to read. Simple tips and inspiration on how to bring calm into
+              your life. Highly recommend.”
+            </p>
+
+            <span>stars</span>
+          </div>
+        </div>
+        <div css={headlineStyles}>Now available on Amazon</div>
+        <div css={centerpositionStyles}>
           <div css={BottonStyles}>Purchase</div>
+        </div>
+
+        <div css={headlineStyles}>Meet the Authors</div>
+        <section css={authorWarpper}>
+          <div css={sectionAuthorStyles}>
+            <img
+              src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359614%2Fwww-next%2Fbook%2Fwatercolor-acton.png&w=640&q=75"
+              alt="Calm book logo"
+            />
+          </div>
+          <div css={sectionAuthorStyles}>Michael Acton Smith @acton</div>
+
+          <div css={sectionAuthorStyles}>
+            <img
+              src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359615%2Fwww-next%2Fbook%2Fwatercolor-tewy.png&w=640&q=75"
+              alt="Calm book logo"
+            />
+          </div>
+          <div css={sectionAuthorStyles}>Alex Tew @tewy</div>
         </section>
-        <section css={sectionTopStyles}>Meet the Authors</section>
-        <section>
-          <img
-            css={authorStyles}
-            src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359614%2Fwww-next%2Fbook%2Fwatercolor-acton.png&w=640&q=75"
-            alt="Calm book logo"
-          />
-          <div css={sectionOneBottomStyles}>Michael Acton Smith @acton</div>
-        </section>
-        <section>
-          <img
-            css={authorStyles}
-            src="https://www.calm.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fcalm-com%2Fimage%2Fupload%2Fv1656359615%2Fwww-next%2Fbook%2Fwatercolor-tewy.png&w=640&q=75"
-            alt="Calm book logo"
-          />
-          <div css={sectionOneBottomStyles}>Alex Tew @tewy</div>
-        </section>
+
+        <br></br>
       </body>
 
       <footer></footer>
