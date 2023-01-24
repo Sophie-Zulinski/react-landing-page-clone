@@ -1,8 +1,10 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
-import { ReactComponent as Amazonlogo } from './amazonlogo.svg';
-import logo from './logo.svg';
-import { ReactComponent as Star } from './Stars.svg';
+import { ReactComponent as Amazonlogo } from './Images/amazonlogo.svg';
+import { ReactComponent as LogoFB } from './Images/facebooklogo.svg';
+import { ReactComponent as LogoInsta } from './Images/instalogo.svg';
+import { ReactComponent as Star } from './Images/stars.svg';
+import { ReactComponent as LogoTwitter } from './Images/twitterlogo.svg';
 
 const bannerSectionStyles = css`
   display: flex;
@@ -12,23 +14,21 @@ const bannerSectionStyles = css`
   padding-right: 100px;
 `;
 
-const BottonStyles = css`
+const bottonStyles = css`
   background: rgb(74, 144, 226);
   border-radius: 100px;
   color: rgb(255, 255, 255);
-  display: inline-flex;
   cursor: pointer;
   padding: 20px 40px;
-  font-weight: 800;
   :hover {
-    background-color: darkblue;
+    background-color: rgb(74, 130, 226);
   }
 `;
 
 const heroimageStyles = css`
   display: flex;
   margin: auto;
-  height: 750px;
+  width: 80vw;
 `;
 
 const headlineStyles = css`
@@ -57,6 +57,32 @@ const sectionOneBottomStyles = css`
   max-width: 750px;
 `;
 
+const reviewCardContainerStyles = css`
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  padding: 32px;
+  gap: 50px;
+  width: 890px;
+  height: 440px;
+  margin: 0px auto;
+  font-weight: 400;
+`;
+
+const cardStyles = css`
+  background-color: white;
+  padding: 42px 36px 28px;
+  font-weight: 300;
+  font-size: 1.2rem;
+`;
+
+const centerpositionStyles = css`
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+`;
+
 const authorWarpper = css`
   display: flex;
   justify-content: center;
@@ -75,35 +101,9 @@ const sectionAuthorStyles = css`
     width: 310px;
   }
   div {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 300;
   }
-`;
-
-const reviewCardContainerStyles = css`
-  display: flex;
-  justify-content: center;
-  width: 500px;
-  padding: 32px;
-  gap: 50px;
-  width: 890px;
-  height: 440px;
-  margin: 0px auto;
-  font-weight: 400;
-`;
-
-const cardStyles = css`
-  background-color: white;
-  padding: 42px 36px 28px;
-  font-weight: 300;
-  font-size: 1.3rem;
-`;
-
-const centerpositionStyles = css`
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin: auto;
 `;
 
 const span = css`
@@ -118,22 +118,50 @@ const spanStars = css`
 
 const highlighttext = css`
   color: #009af9;
+  font-weight: 800;
 `;
 
-const footerStyles = css`
-  text-decoration: none;
+const footerStyles01 = css`
   display: flex;
-  font-size: 30px;
   list-style: none;
   justify-content: space-around;
   gap: 40px;
+  background-color: white;
   ul {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(85, 85, 85);
   }
   li {
-    font-size: 0.9rem;
-    font-weight: 300;
+    font-size: 0.7rem;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.3rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: #555555;
+    opacity: 0.8;
+  }
+`;
+
+const footerStyles02 = css`
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  color: lightgrey;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding: 50px;
+  font-size: 14px;
+`;
+
+const socialmedialogos = css`
+  a {
+    padding: 10px;
+    fill: rgb(85, 85, 85);
   }
 `;
 
@@ -152,7 +180,7 @@ function App() {
             </a>
           </div>
 
-          <div css={BottonStyles}>
+          <div css={bottonStyles}>
             <Amazonlogo />
             <span css={span}> Purchase</span>
           </div>
@@ -206,7 +234,10 @@ function App() {
         </div>
         <div css={headlineStyles}>Now available on Amazon</div>
         <div css={centerpositionStyles}>
-          <div css={BottonStyles}>Purchase</div>
+          <div css={bottonStyles}>
+            <Amazonlogo />
+            <span css={span}> Purchase</span>
+          </div>
         </div>
 
         <div css={headlineStyles}>Meet the Authors</div>
@@ -237,30 +268,85 @@ function App() {
         <br></br>
       </body>
 
-      <footer css={footerStyles}>
-        <section>
+      <footer css={footerStyles01}>
+        <div>
           <ul>Company</ul>
-          <li>About</li>
-          <li>Careers</li>
-          <li>Press</li>
-          <li>Blog</li>
-          <li>Meet our Instructor</li>
-        </section>
+          <a href="/#">
+            <li>About</li>
+          </a>
+          <a href="/#">
+            <li>Careers</li>
+          </a>
+          <a href="/#">
+            {' '}
+            <li>Press</li>
+          </a>
+          <a href="/#">
+            <li>Blog</li>
+          </a>
+          <a href="/#">
+            <li>Meet our Instructor</li>
+          </a>
+        </div>
         <section>
           <ul>Offers</ul>
-          <li>Buy a Gift</li>
-          <li>Redeem a Gift</li>
-          <li>Family Plan</li> <li>Calm Health</li> <li>Calm for Business</li>
+          <a href="/#">
+            <li>Buy a Gift</li>
+          </a>
+          <a href="/#">
+            <li>Redeem a Gift</li>
+          </a>
+          <a href="/#">
+            <li>Family Plan</li>
+          </a>
+          <a href="/#">
+            <li>Calm Health</li>
+          </a>
+          <a href="/#">
+            <li>Calm for Business</li>
+          </a>
         </section>
         <section>
           <ul>Help</ul>
-          <li>FAQ </li>
-          <li>Contact Us</li> <li>Terms</li> <li>Privacy</li>{' '}
-          <li>CCPA Notice</li>
-          <li>Accessibility Statement</li>
-          <li>Opt Out of Targeted Ads Cookies</li>
+          <a href="/#">
+            <li>FAQ </li>
+          </a>
+          <a href="/#">
+            <li>Contact Us</li>
+          </a>
+          <a href="/#">
+            <li>Terms</li>
+          </a>
+          <a href="/#">
+            <li>Privacy</li>
+          </a>
+          <a href="/#">
+            <li>CCPA Notice</li>
+          </a>
+          <a href="/#">
+            <li>Accessibility Statement</li>
+          </a>
+          <a href="/#">
+            <li>Opt Out of Targeted Ads Cookies</li>
+          </a>
+        </section>
+        <section css={socialmedialogos}>
+          <ul>
+            <a href="/#">
+              <LogoFB />
+            </a>
+            <a href="/#">
+              <LogoInsta />
+            </a>
+            <a href="/#">
+              <LogoTwitter />
+            </a>
+          </ul>
         </section>
       </footer>
+      <section css={footerStyles02}>
+        Copyright © 2023 Calm. All rights reserved
+      </section>
     </>
   );
 }
