@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react';
+import { ReactComponent as Amazonlogo } from './amazonlogo.svg';
 import logo from './logo.svg';
+import { ReactComponent as Star } from './Stars.svg';
 
 const bannerSectionStyles = css`
   display: flex;
@@ -40,7 +42,7 @@ const headlineStyles = css`
   padding: 1rem;
   text-anchor: middle;
   margin: 20px;
-  background-image: linear-gradient(blue, red);
+  background-image: url('https://www.calm.com/_next/static/media/calm-text-gradient.6c145128.png');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
@@ -92,6 +94,8 @@ const reviewCardContainerStyles = css`
 
 const cardStyles = css`
   background-color: white;
+  padding: 42px 36px 28px;
+  font-weight: 400;
 `;
 
 const centerpositionStyles = css`
@@ -116,7 +120,7 @@ function App() {
           </div>
 
           <div css={BottonStyles}>
-            <img src="" alt="amazon logo" />
+            <Amazonlogo />
             Purchase
           </div>
         </section>
@@ -151,24 +155,22 @@ function App() {
         </section>
         <div css={reviewCardContainerStyles}>
           <div css={cardStyles}>
-            <p>
-              “Great collage of ideas and practical advice of how to reduce
-              stress in this fast paced world. A beautifully presented book
-              which even calms you down when you pick it up. I would recommend
-              it to everyone.”
-            </p>
-
-            <span>stars</span>
+            “Great collage of ideas and practical advice of how to reduce stress
+            in this fast paced world. A beautifully presented book which even
+            calms you down when you pick it up. I would recommend it to
+            everyone.”
+            <span>
+              <Star />
+            </span>
           </div>
 
           <div css={cardStyles}>
-            <p>
-              “A beautifully presented book that is as lovely to look at as it
-              is to read. Simple tips and inspiration on how to bring calm into
-              your life. Highly recommend.”
-            </p>
-
-            <span>stars</span>
+            “A beautifully presented book that is as lovely to look at as it is
+            to read. Simple tips and inspiration on how to bring calm into your
+            life. Highly recommend.”
+            <span>
+              <Star />
+            </span>
           </div>
         </div>
         <div css={headlineStyles}>Now available on Amazon</div>

@@ -10,6 +10,7 @@ root.render(
     <Global
       styles={css`
         body {
+          background-color: rgb(244, 246, 248)
         }
         *,
         ::after,
@@ -17,7 +18,7 @@ root.render(
           box-sizing: border-box;
           font-family: 'Mulish', sans-serif;
           font-size: 20px;
-          background-color: rgb(244, 246, 248);
+          ;
           font-weight: 400;
       `}
     />
