@@ -36,18 +36,18 @@ const heroimageStyles02 = css`
   margin: auto;
   width: 90vw;
 `;
+
 const headlineStyles = css`
   display: flex;
   justify-content: center;
   font-size: 2.2rem;
   font-weight: 300;
   padding: 1rem;
-  text-anchor: middle  x: 50% y: 50%;;
+  text-anchor: middle;
   margin: 20px;
   background-image: url('https://www.calm.com/_next/static/media/calm-text-gradient.6c145128.png');
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
 `;
 
 const sectionOneBottomStyles = css`
@@ -65,7 +65,6 @@ const sectionOneBottomStyles = css`
 const reviewCardContainerStyles = css`
   display: flex;
   justify-content: center;
-  width: 500px;
   padding: 32px;
   gap: 50px;
   width: 890px;
@@ -272,7 +271,7 @@ function App() {
           </div>
         </section>
 
-        <br></br>
+        <br />
       </body>
 
       <footer css={footerStyles01}>
